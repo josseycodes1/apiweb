@@ -11,4 +11,5 @@ def register_user(request):
     if serializer.is_valid():
         serializer.save()
         return Response(serializer.data)
-    return Response(serializer.errors, status=status.HHTP_400_BAD_REQUEST)
+    return Response(serializer.data, status=status.HTTP_201_CREATED)  # Returning a 201 CREATED status on successful creation
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST) 
