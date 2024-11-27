@@ -20,24 +20,24 @@ pip install -r requirements.txt
 8. Install Django
 pip install django
 
-10. Test Django
+9. Test Django
 python -m django --version
 
-11. Start a new project in the directory
+10. Start a new project in the directory
 django-admin startproject nameofproject . 
 it is important that you add that . after the name of the project.
 
 
-12. Create an app.
+11. Create an app.
 python manage.py startapp nameofapp
 
-9. install django rest framework
+12. install django rest framework
 pip install djangorestframework
  'rest_framework', in settings.py file
 
 13. Add app and rest framework to settings
 
-14. do the migration 
+14. do the migration. do not migrate yet if you are using a customuser 
 python manage.py makemigrations
 python manage.py migrate
 
@@ -46,24 +46,33 @@ python manage.py runserver
 
 PART 2: MODELS AND ADMIN INTERFACE
 
-15. customize your models
-16. add the config to the settings.py
+1. customize your models
+Add string methods
 
-17. Create Models, and apply migrations 
+def __str__(self):
+        return str(self.id)
+
+2. add the config to the settings.py
+
+3. Create Models, and apply migrations 
 python manage.py makemigrations
 python manage.py migrate
 
-18. Register Models in Admin Interface 
+4. Register Models in Admin Interface 
 
-13- Create superuser 
+5. Create superuser 
 python manage.py createsuperuser
 
 confirm by adding /admin/login to the url aftrewards try running the server with 'python manage.py runserver'
 
-14- Add string methods
+6. create a serializers.py file
 
-def __str__(self):
-        return str(self.id)
+7. edit your views.py file
+
+8. edit your url.py file in your app, but create the urls.py manually 
+
+9. edit url.py file in your django project. add the path
+
 15- Configure static files path and urls
 
 STATIC_URL = '/static/'
