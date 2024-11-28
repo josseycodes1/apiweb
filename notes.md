@@ -65,13 +65,17 @@ python manage.py createsuperuser
 
 confirm by adding /admin/login to the url aftrewards try running the server with 'python manage.py runserver'
 
-6. create a serializers.py file
+6. create a serializers.py file for registering users (SIGN UP BACKEND SETTINGS)
 
 7. edit your views.py file
 
 8. edit your url.py file in your app, but create the urls.py manually 
 
 9. edit url.py file in your django project. add the path
+
+10. check with postman
+
+11. work on login in users using jwt(SIGN IN BACKEND SETTINGS)
 
 15- Configure static files path and urls
 
